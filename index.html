@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morris Area Child Care Center (MACCC) - Morris, MN</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        maccc: {
+                            teal: '#0D9488',       /* Playful Deep Teal */
+                            teallight: '#CCFBF1',  /* Soft Teal Tint */
+                            gold: '#F59E0B',       /* Sun Amber Gold */
+                            goldlight: '#FEF3C7', 
+                            sky: '#0284C7',        /* Playful Sky Blue */
+                            skylight: '#E0F2FE',
+                            coral: '#EF4444',      /* Accent Coral Red */
+                            corallight: '#FEE2E2',
+                            purple: '#8B5CF6',
+                            purplelight: '#F3E8FF',
+                            cream: '#FAF9F6',      /* Warm Soft Off-White */
+                            navy: '#0F172A'       /* Slate Navy Text */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .font-display { font-family: 'Outfit', sans-serif; }
+        .glass-nav {
+            background: rgba(250, 249, 246, 0.95);
+            backdrop-filter: blur(12px);
+        }
+        .blueprint-spot {
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .blueprint-spot:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 10px 25px -5px rgba(13, 148, 136, 0.25);
+        }
+        .blueprint-spot.active {
+            border-color: #F59E0B !important;
+            background-color: #FEF3C7 !important;
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF9F6;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0D9488;
+        }
+        /* Bounce & Sparkle Animations */
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: float-slow 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-maccc-cream text-slate-800 font-sans antialiased selection:bg-maccc-gold selection:text-slate-900">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-maccc-teal text-white text-xs py-2 px-4 shadow-inner">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left font-medium">
+            <div class="flex items-center gap-2">
+                <span class="bg-maccc-gold text-slate-900 font-extrabold px-2.5 py-0.5 rounded-full text-[10px] uppercase tracking-wider shadow-sm animate-pulse">⭐ Achievement</span>
+                <span>Morris Area Child Care Center has earned a <strong>4-Star Parent Aware Rating!</strong></span>
+            </div>
+            <div class="flex items-center gap-4 text-[11px] font-semibold text-teal-50">
+                <a href="tel:3203491880" class="hover:underline flex items-center gap-1"><i class="fa-solid fa-phone text-maccc-gold"></i> 320-349-1880</a>
+                <a href="mailto:morrisareachildcare@hotmail.com" class="hidden md:inline hover:underline flex items-center gap-1"><i class="fa-solid fa-envelope text-maccc-gold"></i> morrisareachildcare@hotmail.com</a>
+                <span class="hidden sm:inline"><i class="fa-solid fa-location-dot text-maccc-gold mr-0.5"></i> 1001 Scotts Ave, Morris, MN</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Header -->
+    <nav class="sticky top-0 z-40 glass-nav border-b border-stone-200/80 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-maccc-teal via-teal-600 to-sky-600 p-1.5 shadow-md group-hover:scale-105 transition-transform flex items-center justify-center shrink-0">
+                        <svg viewBox="0 0 100 100" class="w-full h-full text-white fill-current drop-shadow">
+                            <circle cx="50" cy="50" r="45" fill="#0D9488" />
+                            <path d="M50 10 L50 20 M50 80 L50 90 M10 50 L20 50 M80 50 L90 50 M22 22 L29 29 M71 71 L78 78 M22 78 L29 71 M71 29 L78 22" stroke="#F59E0B" stroke-width="6" stroke-linecap="round" />
+                            <rect x="25" y="52" width="22" height="22" rx="4" fill="#F59E0B" />
+                            <text x="36" y="68" font-size="15" font-weight="bold" text-anchor="middle" fill="#1E293B">M</text>
+                            <rect x="53" y="52" width="22" height="22" rx="4" fill="#0284C7" />
+                            <text x="64" y="68" font-size="15" font-weight="bold" text-anchor="middle" fill="#FFFFFF">A</text>
+                            <rect x="39" y="28" width="22" height="22" rx="4" fill="#EF4444" />
+                            <text x="50" y="44" font-size="15" font-weight="bold" text-anchor="middle" fill="#FFFFFF">C</text>
+                            <path d="M50 78 C 35 90, 20 75, 35 65 C 50 55, 50 55, 50 55 C 50 55, 50 55, 65 65 C 80 75, 65 90, 50 78 Z" fill="#F59E0B" opacity="0.9" />
+                        </svg>
+                    </div>
+
+                    <div>
+                        <div class="flex items-center gap-1.5">
+                            <span class="text-xl sm:text-2xl font-black font-display tracking-tight text-slate-900 block leading-none">MACCC</span>
+                            <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-1.5 py-0.5 rounded flex items-center gap-1 border border-amber-300">
+                                ⭐ 4-Star
+                            </span>
+                        </div>
+                        <span class="text-xs font-bold text-maccc-teal uppercase tracking-wider block">Morris Area Child Care Center</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden xl:flex items-center space-x-5 text-xs font-bold text-slate-700 uppercase tracking-wide">
+                    <a href="#about" class="hover:text-maccc-teal transition-colors">About</a>
+                    <a href="#programs" class="hover:text-maccc-teal transition-colors">Programs</a>
+                    <a href="#calculator" class="hover:text-maccc-teal transition-colors">Tuition & CCAP</a>
+                    <a href="#caregivers" class="hover:text-maccc-teal transition-colors text-maccc-purple"><i class="fa-solid fa-user-nurse mr-1"></i>Caregivers Portal</a>
+                    <a href="#faq" class="hover:text-maccc-teal transition-colors">FAQ</a>
+                    <a href="#tour" class="hover:text-maccc-teal transition-colors">Tour</a>
+                    <a href="#campaign" class="hover:text-maccc-teal transition-colors">Donate</a>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex items-center space-x-3">
+                    <button onclick="openModal('donate-modal')" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl text-xs font-bold text-maccc-teal bg-maccc-teallight border border-maccc-teal/30 hover:bg-maccc-teal hover:text-white transition-all">
+                        <i class="fa-solid fa-heart text-maccc-coral"></i> Donate
+                    </button>
+                    <a href="#enroll-form" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-slate-900 bg-maccc-gold hover:bg-amber-500 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-clipboard-check"></i> Join Waitlist
+                    </a>
+                    <!-- Mobile Menu Hamburger -->
+                    <button id="mobile-menu-btn" class="xl:hidden p-2 text-slate-700 hover:text-maccc-teal focus:outline-none" aria-label="Toggle navigation menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden xl:hidden border-t border-stone-200 bg-maccc-cream px-4 pt-4 pb-6 space-y-3 shadow-xl">
+            <a href="#about" class="block py-2 text-sm font-bold text-slate-700 hover:text-maccc-teal border-b border-stone-200/60">About Us</a>
+            <a href="#programs" class="block py-2 text-sm font-bold text-slate-700 hover:text-maccc-teal border-b border-stone-200/60">Programs</a>
+            <a href="#calculator" class="block py-2 text-sm font-bold text-slate-700 hover:text-maccc-teal border-b border-stone-200/60">Tuition & CCAP Calculator</a>
+            <a href="#caregivers" class="block py-2 text-sm font-bold text-maccc-purple hover:text-purple-800 border-b border-stone-200/60"><i class="fa-solid fa-user-nurse mr-1"></i> Caregivers & Educators Portal</a>
+            <a href="#faq" class="block py-2 text-sm font-bold text-slate-700 hover:text-maccc-teal border-b border-stone-200/60">Frequently Asked Questions (FAQ)</a>
+            <a href="#tour" class="block py-2 text-sm font-bold text-slate-700 hover:text-maccc-teal border-b border-stone-200/60">Facility Tour</a>
+            <a href="#campaign" class="block py-2 text-sm font-bold text-slate-700 hover:text-maccc-teal border-b border-stone-200/60">Capital Campaign</a>
+            <div class="pt-2 flex flex-col gap-2">
+                <button onclick="openModal('donate-modal')" class="w-full py-3 rounded-xl font-bold text-maccc-teal bg-maccc-teallight border border-maccc-teal/30 text-center">
+                    <i class="fa-solid fa-heart text-maccc-coral mr-1"></i> Donate to Campaign
+                </button>
+                <a href="#enroll-form" class="w-full py-3 rounded-xl font-bold text-slate-900 bg-maccc-gold text-center">
+                    Join Enrollment Waitlist
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="about" class="relative overflow-hidden bg-gradient-to-b from-maccc-teallight/50 via-maccc-cream to-maccc-cream pt-10 pb-16 lg:pt-16 lg:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Copy -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 text-amber-900 text-xs sm:text-sm font-bold border-2 border-amber-300 shadow-sm animate-float">
+                        <span class="text-amber-500 font-black tracking-widest text-sm">⭐⭐⭐⭐</span>
+                        <span>Official 4-Star Parent Aware Rated Center in Stevens County</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-display text-slate-900 leading-tight">
+                        Nurturing Young Minds in <span class="text-maccc-teal underline decoration-maccc-gold decoration-8 underline-offset-4">Morris, Minnesota</span>
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg text-slate-600 font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Licensed, high-quality early childhood education & daycare for children ages 6 weeks to 10 years. Supporting local families, educators, healthcare staff, and university faculty across Stevens County.
+                    </p>
+
+                    <!-- Quick Actions CTA Row -->
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+                        <a href="#enroll-form" class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-maccc-teal text-white font-bold text-sm shadow-lg shadow-teal-700/20 hover:bg-teal-800 transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-calendar-check"></i> Schedule a Tour
+                        </a>
+                        <a href="#caregivers" class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-maccc-purplelight text-maccc-purple border border-purple-200 font-bold text-sm hover:bg-purple-200 transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-user-nurse"></i> Caregiver Careers
+                        </a>
+                        <a href="#calculator" class="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-white text-slate-800 font-bold text-sm border-2 border-stone-200 hover:border-maccc-gold hover:text-amber-700 shadow-sm transition-all flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-calculator text-maccc-gold"></i> Tuition Calculator
+                        </a>
+                    </div>
+
+                    <!-- Badges Grid -->
+                    <div class="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-3 text-left">
+                        <div class="bg-white p-3.5 rounded-2xl border border-stone-200 shadow-sm flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-xs font-bold text-slate-800">4-Star Rated</h2>
+                                <p class="text-[10px] text-slate-500">Parent Aware MN</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-3.5 rounded-2xl border border-stone-200 shadow-sm flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-maccc-teallight text-maccc-teal flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-xs font-bold text-slate-800">5:45 AM – 6 PM</h2>
+                                <p class="text-[10px] text-slate-500">Shift-Friendly Hours</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-3.5 rounded-2xl border border-stone-200 shadow-sm flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-solid fa-hand-holding-dollar"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-xs font-bold text-slate-800">CCAP Accepted</h2>
+                                <p class="text-[10px] text-slate-500">Scholarships & Grants</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-3.5 rounded-2xl border border-stone-200 shadow-sm flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center shrink-0 text-lg">
+                                <i class="fa-solid fa-apple-whole"></i>
+                            </div>
+                            <div>
+                                <h2 class="text-xs font-bold text-slate-800">USDA Meals</h2>
+                                <p class="text-[10px] text-slate-500">Fresh Cooked Daily</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative bg-white p-4 rounded-3xl shadow-xl border-2 border-maccc-teal/20">
+                        <div class="relative h-80 rounded-2xl overflow-hidden bg-stone-100 group">
+                            <img src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Children learning at Morris Area Child Care Center" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                 onerror="this.src='https://placehold.co/800x600/0D9488/FFFFFF?text=Morris+Area+Child+Care+Center'">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <span class="bg-maccc-gold text-slate-900 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase">1001 Scotts Ave, Morris</span>
+                                <h3 class="text-lg font-bold font-display mt-1">Licensed Non-Profit Center</h3>
+                                <p class="text-xs text-slate-200">Serving Morris, Chokio, Cyrus, and Stevens County families.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <section id="programs" class="py-16 sm:py-24 bg-white border-y border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-maccc-teal font-bold text-xs uppercase tracking-widest bg-maccc-teallight px-3 py-1 rounded-full border border-maccc-teal/20">Learning Programs</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-display text-slate-900 mt-3">
+                    Developmental Care Tailored for Every Age
+                </h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Explore our certified lead teacher ratios, active schedules, and engaging early learning spaces.</p>
+            </div>
+
+            <!-- Tabs Navigation -->
+            <div class="flex flex-wrap gap-2 sm:gap-3 justify-center mb-10" id="program-tabs-container">
+                <button onclick="switchProgram('infant')" id="prog-tab-infant" class="prog-tab-btn px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm transition-all bg-maccc-teal text-white shadow-md">
+                    <i class="fa-solid fa-baby mr-2 text-maccc-gold"></i> Infant Room <span class="text-[11px] opacity-80">(6 wks – 16 mos)</span>
+                </button>
+                <button onclick="switchProgram('toddler')" id="prog-tab-toddler" class="prog-tab-btn px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm text-slate-600 hover:bg-stone-100 transition-all">
+                    <i class="fa-solid fa-shapes mr-2 text-maccc-coral"></i> Toddler Program <span class="text-[11px] opacity-80">(16 – 33 mos)</span>
+                </button>
+                <button onclick="switchProgram('preschool')" id="prog-tab-preschool" class="prog-tab-btn px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm text-slate-600 hover:bg-stone-100 transition-all">
+                    <i class="fa-solid fa-palette mr-2 text-maccc-sky"></i> Preschool Pre-K <span class="text-[11px] opacity-80">(33 mos – 5 yrs)</span>
+                </button>
+                <button onclick="switchProgram('schoolage')" id="prog-tab-schoolage" class="prog-tab-btn px-5 py-3 rounded-2xl font-bold text-xs sm:text-sm text-slate-600 hover:bg-stone-100 transition-all">
+                    <i class="fa-solid fa-graduation-cap mr-2 text-maccc-gold"></i> School-Age / Summer <span class="text-[11px] opacity-80">(K – Age 10)</span>
+                </button>
+            </div>
+
+            <!-- Program Detail Panes -->
+            <div class="bg-maccc-cream rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-lg">
+                <!-- Infant -->
+                <div id="prog-content-infant" class="prog-pane grid lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-maccc-teallight text-maccc-teal text-xs font-bold rounded-lg"><i class="fa-solid fa-user-group mr-1"></i> Staff Ratio: 1:4</span>
+                            <span class="px-3 py-1 bg-amber-100 text-amber-900 text-xs font-bold rounded-lg"><i class="fa-solid fa-heart mr-1"></i> Dedicated Lead Infant Educator</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-display text-slate-900">Lead Infant Nurturing Suite</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            A peaceful, loving environment tailored to match each baby's unique home schedule. Lead infant teachers provide individual bonding, sensory tummy time, storytime, and daily app photo updates.
+                        </p>
+                        <div class="pt-2 border-t border-stone-200">
+                            <h4 class="text-xs font-bold uppercase text-slate-500 tracking-wider mb-2">Sample Daily Routine</h4>
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <div class="p-2 bg-white rounded-lg border border-stone-200"><strong class="text-maccc-teal">5:45 AM:</strong> Early Greeting & Quiet Snuggles</div>
+                                <div class="p-2 bg-white rounded-lg border border-stone-200"><strong class="text-maccc-teal">9:00 AM:</strong> Sensory Exploration & Music</div>
+                                <div class="p-2 bg-white rounded-lg border border-stone-200"><strong class="text-maccc-teal">11:30 AM:</strong> Feeding & Individual Naps</div>
+                                <div class="p-2 bg-white rounded-lg border border-stone-200"><strong class="text-maccc-teal">2:30 PM:</strong> Outdoor Stroller Walk / Buggy Ride</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=600&q=80" alt="MACCC Infant Suite" class="rounded-2xl shadow-md border border-stone-200 w-full h-64 object-cover">
+                    </div>
+                </div>
+
+                <!-- Toddler -->
+                <div id="prog-content-toddler" class="prog-pane hidden grid lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-maccc-teallight text-maccc-teal text-xs font-bold rounded-lg"><i class="fa-solid fa-user-group mr-1"></i> Staff Ratio: 1:7</span>
+                            <span class="px-3 py-1 bg-rose-100 text-rose-900 text-xs font-bold rounded-lg"><i class="fa-solid fa-toilet mr-1"></i> Potty Training Support</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-display text-slate-900">Lead Toddler Active Classroom</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Toddlers thrive through structured play, songs, messy art, and sensory tables. Our educators partner with parents on potty training milestones with gentle encouragement.
+                        </p>
+                        <div class="pt-2 border-t border-stone-200">
+                            <h4 class="text-xs font-bold uppercase text-slate-500 tracking-wider mb-2">Sample Daily Routine</h4>
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <div class="p-2 bg-white rounded-lg border border-stone-200"><strong class="text-maccc-teal">8:30 AM:</strong> Breakfast & Circle Time</div>
+                                <div class="p-2 bg-white rounded-lg border border-stone-200"><strong class="text-maccc-teal">10:00 AM:</strong> Outdoor Playground Play</div>
+                                <div class="p-2 bg-white rounded-lg border border-stone-200"><strong class="text-maccc-teal">12:00 PM:</strong> Warm Lunch & Nap Time</div>
+                                <div class="p-2 bg-white rounded-lg border border-stone-200"><strong class="text-maccc-teal">3:00 PM:</strong> Finger Painting & Storytime</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=600&q=80" alt="MACCC Toddler Play Area" class="rounded-2xl shadow-md border border-stone-200 w-full h-64 object-cover">
+                    </div>
+                </div>
+
+                <!-- Preschool -->
+                <div id="prog-content-preschool" class="prog-pane hidden grid lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-maccc-teallight text-maccc-teal text-xs font-bold rounded-lg"><i class="fa-solid fa-user-group mr-1"></i> Staff Ratio: 1:10</span>
+                            <span class="px-3 py-1 bg-sky-100 text-sky-900 text-xs font-bold rounded-lg"><i class="fa-solid fa-award mr-1"></i> 4-Star Kindergarten Readiness</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-display text-slate-900">Lead Preschool & Kindergarten Readiness</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Aligning with Minnesota early learning standards, our preschool focuses on phonics, counting, social-emotional maturity, and science experiments. Includes splash pad days at Pomme de Terre Park!
+                        </p>
+                        <div class="pt-2 border-t border-stone-200">
+                            <h4 class="text-xs font-bold uppercase text-slate-500 tracking-wider mb-2">Sample Daily Routine</h4>
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <div class="p-2 bg-white rounded-lg border border-stone-200"><strong class="text-maccc-teal">9:00 AM:</strong> Phonics & Letter Exploration</div>
+                                <div class="p-2 bg-white rounded-lg border border-stone-200"><strong class="text-maccc-teal">10:30 AM:</strong> STEAM Science Projects</div>
+                                <div class="p-2 bg-white rounded-lg border border-stone-200"><strong class="text-maccc-teal">1:30 PM:</strong> Splash Pad / Outdoor Park Trip</div>
+                                <div class="p-2 bg-white rounded-lg border border-stone-200"><strong class="text-maccc-teal">3:30 PM:</strong> Interactive Story & Group Play</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" alt="MACCC Preschool Learning" class="rounded-2xl shadow-md border border-stone-200 w-full h-64 object-cover">
+                    </div>
+                </div>
+
+                <!-- School Age -->
+                <div id="prog-content-schoolage" class="prog-pane hidden grid lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-4">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-maccc-teallight text-maccc-teal text-xs font-bold rounded-lg"><i class="fa-solid fa-user-group mr-1"></i> Staff Ratio: 1:15</span>
+                            <span class="px-3 py-1 bg-purple-100 text-purple-900 text-xs font-bold rounded-lg"><i class="fa-solid fa-bus mr-1"></i> Morris Public Schools Bus Stop</span>
+                        </div>
+                        <h3 class="text-2xl font-bold font-display text-slate-900">Before/After School Care & Summer Camp</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Supervision for elementary students with quiet homework assistance, outdoor games, 4th of July kiddie parade prep, and full-day summer break programming.
+                        </p>
+                        <div class="pt-2 border-t border-stone-200">
+                            <h4 class="text-xs font-bold uppercase text-slate-500 tracking-wider mb-2">Sample Daily Routine</h4>
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <div class="p-2 bg-white rounded-lg border border-stone-200"><strong class="text-maccc-teal">5:45 AM:</strong> Early Morning Drop-off</div>
+                                <div class="p-2 bg-white rounded-lg border border-stone-200"><strong class="text-maccc-teal">3:15 PM:</strong> School Bus Arrival & Snack</div>
+                                <div class="p-2 bg-white rounded-lg border border-stone-200"><strong class="text-maccc-teal">4:00 PM:</strong> Homework Club & STEM Art</div>
+                                <div class="p-2 bg-white rounded-lg border border-stone-200"><strong class="text-maccc-teal">5:00 PM:</strong> Outdoor Athletics & Free Play</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5">
+                        <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" alt="MACCC After School" class="rounded-2xl shadow-md border border-stone-200 w-full h-64 object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="py-16 sm:py-24 bg-maccc-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-maccc-gold font-bold text-xs uppercase tracking-widest bg-maccc-goldlight px-3 py-1 rounded-full border border-maccc-gold/30">Transparent Pricing</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-display text-slate-900 mt-3">
+                    Tuition & MN CCAP Calculator
+                </h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">We accept Child Care Assistance Program (CCAP) and Early Learning Scholarships to help families access quality care.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
+                <div class="lg:col-span-6 bg-white p-6 sm:p-8 rounded-3xl border border-stone-200 shadow-xl space-y-5">
+                    <div class="flex items-center gap-3 border-b border-stone-100 pb-4">
+                        <div class="w-10 h-10 rounded-xl bg-maccc-teallight text-maccc-teal flex items-center justify-center font-bold text-lg">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold font-display text-slate-900">Estimate Weekly Cost</h3>
+                            <p class="text-xs text-slate-500">Select options below to update rates in real time.</p>
+                        </div>
+                    </div>
+
+                    <form onsubmit="event.preventDefault();" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5">Child's Program</label>
+                            <select id="calc-age" onchange="runTuitionCalc()" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-maccc-teal">
+                                <option value="infant">Infant Room (6 wks – 16 mos) • Base $255/wk</option>
+                                <option value="toddler">Toddler Room (16 – 33 mos) • Base $220/wk</option>
+                                <option value="preschool">Preschool Care (33 mos – 5 yrs) • Base $195/wk</option>
+                                <option value="schoolage">School-Age Care (K – Age 10) • Base $125/wk</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5">Schedule Type</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <label class="flex flex-col items-center justify-center p-3 bg-stone-50 border border-stone-200 rounded-xl cursor-pointer hover:border-maccc-teal transition-all text-center">
+                                    <input type="radio" name="schedule" value="full" checked onchange="runTuitionCalc()" class="text-maccc-teal focus:ring-maccc-teal">
+                                    <span class="text-xs font-bold text-slate-800 mt-1">Full Time</span>
+                                    <span class="text-[10px] text-slate-500">5 Days/Wk</span>
+                                </label>
+                                <label class="flex flex-col items-center justify-center p-3 bg-stone-50 border border-stone-200 rounded-xl cursor-pointer hover:border-maccc-teal transition-all text-center">
+                                    <input type="radio" name="schedule" value="part" onchange="runTuitionCalc()" class="text-maccc-teal focus:ring-maccc-teal">
+                                    <span class="text-xs font-bold text-slate-800 mt-1">Part Time</span>
+                                    <span class="text-[10px] text-slate-500">3 Days/Wk</span>
+                                </label>
+                                <label class="flex flex-col items-center justify-center p-3 bg-stone-50 border border-stone-200 rounded-xl cursor-pointer hover:border-maccc-teal transition-all text-center">
+                                    <input type="radio" name="schedule" value="half" onchange="runTuitionCalc()" class="text-maccc-teal focus:ring-maccc-teal">
+                                    <span class="text-xs font-bold text-slate-800 mt-1">Half Days</span>
+                                    <span class="text-[10px] text-slate-500">5 Mornings</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="p-4 bg-maccc-teallight/60 rounded-xl border border-maccc-teal/20 space-y-2">
+                            <label class="flex items-center gap-3 cursor-pointer">
+                                <input type="checkbox" id="calc-ccap" onchange="runTuitionCalc()" class="w-4 h-4 text-maccc-teal rounded focus:ring-maccc-teal">
+                                <span class="text-xs font-bold text-maccc-teal">Apply Stevens County CCAP Subsidy Estimate</span>
+                            </label>
+                            <p class="text-[11px] text-slate-600 leading-normal">
+                                Qualify through Stevens County Human Services? Check to estimate co-pay coverage.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="lg:col-span-6 bg-slate-900 text-white p-6 sm:p-8 rounded-3xl shadow-xl flex flex-col justify-between min-h-[380px]">
+                    <div>
+                        <div class="flex justify-between items-center border-b border-slate-700 pb-4 mb-6">
+                            <span class="text-xs font-bold text-maccc-gold uppercase tracking-wider">Estimated Weekly Breakdown</span>
+                            <span class="text-[10px] bg-slate-800 text-slate-300 px-2 py-1 rounded">Includes Meals & Snacks</span>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-300">Base Rate:</span>
+                                <span class="font-bold text-white" id="out-base">$255.00</span>
+                            </div>
+                            <div class="flex justify-between text-sm">
+                                <span class="text-slate-300">Schedule Discount:</span>
+                                <span class="font-bold text-emerald-400" id="out-discount">$0.00</span>
+                            </div>
+                            <div class="flex justify-between text-sm border-t border-slate-700/80 pt-3">
+                                <span class="text-slate-300">Estimated CCAP Subsidy Credit:</span>
+                                <span class="font-bold text-maccc-gold" id="out-ccap">-$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700 mt-6 text-center">
+                        <span class="text-xs text-slate-400 uppercase font-semibold">Estimated Out-Of-Pocket Family Co-Pay</span>
+                        <div class="text-4xl sm:text-5xl font-black font-display text-maccc-gold mt-1" id="out-final">
+                            $255<span class="text-xs font-sans text-slate-400 font-normal"> / week</span>
+                        </div>
+                        <p class="text-[11px] text-slate-400 mt-2">Call <strong>320-349-1880</strong> for official scholarship application assistance!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: CAREGIVERS & EDUCATORS PORTAL -->
+    <section id="caregivers" class="py-16 sm:py-24 bg-gradient-to-b from-purple-900 via-slate-900 to-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-purple-300 font-bold text-xs uppercase tracking-widest bg-purple-950/80 px-3.5 py-1.5 rounded-full border border-purple-500/30">
+                    <i class="fa-solid fa-heart-pulse text-maccc-coral mr-1"></i> Caregivers & Educators
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-display text-white mt-3">
+                    Where Caring Educators Thrive
+                </h2>
+                <p class="text-purple-200 mt-2 text-sm sm:text-base">
+                    At MACCC, our team is the heart of our 4-Star Parent Aware rating. Explore teacher perks, staff quick links, and active career openings in Morris!
+                </p>
+            </div>
+
+            <!-- Benefits Cards -->
+            <div class="grid md:grid-cols-3 gap-6 mb-16">
+                <div class="bg-slate-800/80 p-6 rounded-3xl border border-purple-500/20 shadow-lg hover:border-purple-400/40 transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-300 flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-hand-holding-hand"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-display text-white mb-2">Discounted Childcare</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Generous tuition discounts for MACCC employees’ own children so you can teach while staying close to family.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/80 p-6 rounded-3xl border border-purple-500/20 shadow-lg hover:border-purple-400/40 transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-maccc-teallight/20 text-maccc-teal flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-display text-white mb-2">CDA & Education Grants</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        100% paid continuing education, Child Development Associate (CDA) training sponsorship, and Parent Aware workshops.
+                    </p>
+                </div>
+
+                <div class="bg-slate-800/80 p-6 rounded-3xl border border-purple-500/20 shadow-lg hover:border-purple-400/40 transition-all">
+                    <div class="w-12 h-12 rounded-2xl bg-maccc-goldlight/20 text-maccc-gold flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-display text-white mb-2">Competitive Pay & PTO</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        Competitive hourly compensation, paid holidays, earned personal time off, and predictable shift schedules.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Active Openings & Staff Tools Grid -->
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- Open Positions Panel -->
+                <div class="lg:col-span-7 bg-slate-800/90 p-6 sm:p-8 rounded-3xl border border-slate-700 shadow-xl space-y-4">
+                    <div class="flex items-center justify-between border-b border-slate-700 pb-4">
+                        <div>
+                            <h3 class="text-xl font-bold font-display text-white">Current Job Openings</h3>
+                            <p class="text-xs text-slate-400">Join our caring team at 1001 Scotts Ave!</p>
+                        </div>
+                        <span class="bg-emerald-500/20 text-emerald-300 text-xs font-bold px-2.5 py-1 rounded-full border border-emerald-500/30">Hiring Now</span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <!-- Job 1 -->
+                        <div class="p-4 bg-slate-900/80 rounded-2xl border border-slate-700 hover:border-maccc-teal transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="text-sm font-bold text-white">Lead Infant Educator</h4>
+                                    <span class="bg-maccc-teal text-white text-[10px] font-extrabold px-2 py-0.5 rounded">Full-Time</span>
+                                </div>
+                                <p class="text-xs text-slate-400 mt-0.5">Experience in early childhood care required. CDA or Degree preferred.</p>
+                            </div>
+                            <button onclick="openApplyModal('Lead Infant Educator')" class="px-4 py-2 bg-maccc-teal hover:bg-teal-600 text-white font-bold text-xs rounded-xl shadow transition-all shrink-0">
+                                Apply Now
+                            </button>
+                        </div>
+
+                        <!-- Job 2 -->
+                        <div class="p-4 bg-slate-900/80 rounded-2xl border border-slate-700 hover:border-maccc-teal transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="text-sm font-bold text-white">Assistant Preschool Teacher</h4>
+                                    <span class="bg-maccc-gold text-slate-900 text-[10px] font-extrabold px-2 py-0.5 rounded">Part/Full Time</span>
+                                </div>
+                                <p class="text-xs text-slate-400 mt-0.5">Help guide kindergarten readiness and classroom play activities.</p>
+                            </div>
+                            <button onclick="openApplyModal('Assistant Preschool Teacher')" class="px-4 py-2 bg-maccc-teal hover:bg-teal-600 text-white font-bold text-xs rounded-xl shadow transition-all shrink-0">
+                                Apply Now
+                            </button>
+                        </div>
+
+                        <!-- Job 3 -->
+                        <div class="p-4 bg-slate-900/80 rounded-2xl border border-slate-700 hover:border-maccc-teal transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="text-sm font-bold text-white">Substitute & On-Call Caregiver</h4>
+                                    <span class="bg-sky-500 text-white text-[10px] font-extrabold px-2 py-0.5 rounded">Flexible</span>
+                                </div>
+                                <p class="text-xs text-slate-400 mt-0.5">Perfect for UMN Morris students or retired educators seeking flexible shifts.</p>
+                            </div>
+                            <button onclick="openApplyModal('Substitute & On-Call Caregiver')" class="px-4 py-2 bg-maccc-teal hover:bg-teal-600 text-white font-bold text-xs rounded-xl shadow transition-all shrink-0">
+                                Apply Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Current Staff Hub Quick Links -->
+                <div class="lg:col-span-5 bg-slate-800/90 p-6 sm:p-8 rounded-3xl border border-purple-500/30 shadow-xl space-y-4">
+                    <div class="border-b border-slate-700 pb-4">
+                        <span class="text-[10px] uppercase tracking-wider font-extrabold text-purple-300 bg-purple-950/80 px-2 py-0.5 rounded">Internal Staff Hub</span>
+                        <h3 class="text-xl font-bold font-display text-white mt-1">Current Staff Portals</h3>
+                        <p class="text-xs text-slate-400">Quick access links for employed MACCC team members.</p>
+                    </div>
+
+                    <div class="space-y-2.5">
+                        <a href="https://brightwheel.com" target="_blank" class="p-3.5 bg-slate-900/80 hover:bg-slate-900 rounded-2xl border border-slate-700 flex items-center justify-between group transition-all">
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-teal-500/20 text-maccc-teal flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-comments"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white group-hover:text-maccc-teal transition-colors">Brightwheel Staff Portal</h4>
+                                    <p class="text-[10px] text-slate-400">Parent messaging & daily logs</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-500 group-hover:text-white"></i>
+                        </a>
+
+                        <button onclick="openModal('handbook-modal')" class="w-full text-left p-3.5 bg-slate-900/80 hover:bg-slate-900 rounded-2xl border border-slate-700 flex items-center justify-between group transition-all">
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-purple-500/20 text-purple-300 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-book"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white group-hover:text-purple-300 transition-colors">Staff Handbook & Guidelines</h4>
+                                    <p class="text-[10px] text-slate-400">Center policies & safety SOPs</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-xs text-slate-500 group-hover:text-white"></i>
+                        </button>
+
+                        <button onclick="openModal('sub-modal')" class="w-full text-left p-3.5 bg-slate-900/80 hover:bg-slate-900 rounded-2xl border border-slate-700 flex items-center justify-between group transition-all">
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-amber-500/20 text-maccc-gold flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-user-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xs font-bold text-white group-hover:text-maccc-gold transition-colors">Submit Shift Coverage Request</h4>
+                                    <p class="text-[10px] text-slate-400">Sub coverage & time-off forms</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-chevron-right text-xs text-slate-500 group-hover:text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: FREQUENTLY ASKED QUESTIONS (FAQ) -->
+    <section id="faq" class="py-16 sm:py-24 bg-white border-y border-stone-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-maccc-teal font-bold text-xs uppercase tracking-widest bg-maccc-teallight px-3 py-1 rounded-full border border-maccc-teal/20">Parent & Staff Help</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-display text-slate-900 mt-3">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Have questions about enrollment, drop-off rules, CCAP subsidies, or teacher positions?</p>
+            </div>
+
+            <!-- Search Filter Bar -->
+            <div class="mb-8 relative max-w-xl mx-auto">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-3.5 text-slate-400"></i>
+                <input type="text" id="faq-search" onkeyup="filterFaqs()" placeholder="Search questions (e.g., CCAP, sickness, hours, waitlist)..." class="w-full bg-stone-50 border border-stone-300 rounded-2xl pl-11 pr-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-maccc-teal shadow-inner">
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="flex flex-wrap gap-2 justify-center mb-8">
+                <button onclick="switchFaqCat('all')" id="faq-tab-all" class="faq-cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-maccc-teal text-white shadow">All Questions</button>
+                <button onclick="switchFaqCat('prospective')" id="faq-tab-prospective" class="faq-cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-stone-100 text-slate-700 hover:bg-stone-200">Prospective Parents</button>
+                <button onclick="switchFaqCat('enrolled')" id="faq-tab-enrolled" class="faq-cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-stone-100 text-slate-700 hover:bg-stone-200">Enrolled Families</button>
+                <button onclick="switchFaqCat('careers')" id="faq-tab-careers" class="faq-cat-btn px-4 py-2 rounded-xl text-xs font-bold bg-stone-100 text-slate-700 hover:bg-stone-200">Careers & Staffing</button>
+            </div>
+
+            <!-- FAQ Accordion Container -->
+            <div class="space-y-3" id="faq-accordion-list">
+                
+                <!-- FAQ Item 1 -->
+                <div class="faq-item prospective bg-maccc-cream rounded-2xl border border-stone-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-4 sm:p-5 font-bold font-display text-slate-900 text-sm sm:text-base flex justify-between items-center gap-4 hover:text-maccc-teal transition-colors">
+                        <span>What are MACCC's operating hours and location in Morris?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-4 pb-5 sm:px-5 text-xs sm:text-sm text-slate-600 border-t border-stone-200/60 pt-3 leading-relaxed">
+                        We are open <strong>Monday through Friday from 5:45 AM to 6:00 PM</strong> to support early-shift healthcare workers, university faculty, teachers, and regional employees. We are located at <strong>1001 Scotts Ave, Morris, MN 56267</strong>.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item prospective bg-maccc-cream rounded-2xl border border-stone-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-4 sm:p-5 font-bold font-display text-slate-900 text-sm sm:text-base flex justify-between items-center gap-4 hover:text-maccc-teal transition-colors">
+                        <span>What does the 4-Star Parent Aware Rating mean for my child?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-4 pb-5 sm:px-5 text-xs sm:text-sm text-slate-600 border-t border-stone-200/60 pt-3 leading-relaxed">
+                        A 4-Star rating is the <strong>highest quality rating given by Minnesota Parent Aware</strong>. It proves MACCC uses research-backed curriculum, conducts ongoing teacher training, supports kindergarten readiness, and maintains excellent staff-to-child safety ratios.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item prospective bg-maccc-cream rounded-2xl border border-stone-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-4 sm:p-5 font-bold font-display text-slate-900 text-sm sm:text-base flex justify-between items-center gap-4 hover:text-maccc-teal transition-colors">
+                        <span>Do you accept Stevens County CCAP and Early Learning Scholarships?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-4 pb-5 sm:px-5 text-xs sm:text-sm text-slate-600 border-t border-stone-200/60 pt-3 leading-relaxed">
+                        <strong>Yes!</strong> MACCC accepts Minnesota Child Care Assistance Program (CCAP) subsidies through Stevens County Human Services as well as Early Learning Scholarships. Use our <a href="#calculator" class="text-maccc-teal underline font-bold">Tuition Calculator</a> above to estimate your co-pay or call 320-349-1880 for assistance applying.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item enrolled bg-maccc-cream rounded-2xl border border-stone-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-4 sm:p-5 font-bold font-display text-slate-900 text-sm sm:text-base flex justify-between items-center gap-4 hover:text-maccc-teal transition-colors">
+                        <span>What is MACCC's illness & fever policy for attending children?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-4 pb-5 sm:px-5 text-xs sm:text-sm text-slate-600 border-t border-stone-200/60 pt-3 leading-relaxed">
+                        Children must stay home if they have a fever of 100.0°F or higher, unexplained vomiting/diarrhea, or contagious rash. Children may return once they have been symptom-free and fever-free without medication for <strong>24 consecutive hours</strong>.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item enrolled bg-maccc-cream rounded-2xl border border-stone-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-4 sm:p-5 font-bold font-display text-slate-900 text-sm sm:text-base flex justify-between items-center gap-4 hover:text-maccc-teal transition-colors">
+                        <span>How are daily updates, meals, and photos communicated to parents?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-4 pb-5 sm:px-5 text-xs sm:text-sm text-slate-600 border-t border-stone-200/60 pt-3 leading-relaxed">
+                        We utilize the <strong>Brightwheel app</strong>! Parents receive real-time notifications for meal times, nap duration, diaper changes/potty updates, classroom photos, and direct teacher messaging right on their mobile phone.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item careers bg-maccc-cream rounded-2xl border border-stone-200 overflow-hidden shadow-sm">
+                    <button onclick="toggleFaq(this)" class="w-full text-left p-4 sm:p-5 font-bold font-display text-slate-900 text-sm sm:text-base flex justify-between items-center gap-4 hover:text-maccc-teal transition-colors">
+                        <span>What qualifications are required to become a Lead Teacher at MACCC?</span>
+                        <i class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-4 pb-5 sm:px-5 text-xs sm:text-sm text-slate-600 border-t border-stone-200/60 pt-3 leading-relaxed">
+                        Lead Teachers must meet Minnesota Department of Human Services (DHS) Rule 3 requirements, which typically includes a Child Development Associate (CDA), Associate's/Bachelor's degree in Early Childhood or related field, plus CPR/First Aid certification (or willingness to complete upon hire).
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="tour" class="py-16 sm:py-24 bg-maccc-cream border-y border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-maccc-teal font-bold text-xs uppercase tracking-widest bg-maccc-teallight px-3 py-1 rounded-full border border-maccc-teal/20">1001 Scotts Ave, Morris</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-display text-slate-900 mt-3">
+                    Interactive Facility Explorer
+                </h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Explore our classrooms, play areas, and secure entrance at Morris Area Child Care Center.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
+                <div class="lg:col-span-7 bg-stone-100 p-4 sm:p-6 rounded-3xl border border-stone-300 shadow-md">
+                    <div class="text-xs text-slate-500 font-semibold mb-3 flex items-center justify-between">
+                        <span><i class="fa-solid fa-compass mr-1"></i> Click any zone to inspect safety & layout</span>
+                        <span class="text-maccc-teal font-bold"><i class="fa-solid fa-shield-halved mr-1"></i> Keycard Secured</span>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-3 h-80 sm:h-96 text-xs font-bold">
+                        <button onclick="inspectSpot('vestibule')" id="spot-vestibule" class="blueprint-spot active col-span-3 bg-white border-2 border-maccc-teal text-slate-800 rounded-xl p-3 flex items-center justify-between shadow-sm">
+                            <span class="flex items-center gap-2 text-slate-900"><i class="fa-solid fa-lock text-maccc-teal"></i> Secure Entry Vestibule & Front Desk</span>
+                            <span class="bg-maccc-teal text-white text-[10px] px-2 py-0.5 rounded">Main Entrance</span>
+                        </button>
+
+                        <button onclick="inspectSpot('infant-room')" id="spot-infant-room" class="blueprint-spot bg-white border-2 border-stone-200 text-slate-800 rounded-xl p-3 flex flex-col items-center justify-center shadow-sm">
+                            <i class="fa-solid fa-baby text-2xl text-sky-600 mb-1"></i>
+                            Infant Suite
+                        </button>
+
+                        <button onclick="inspectSpot('toddler-wing')" id="spot-toddler-wing" class="blueprint-spot bg-white border-2 border-stone-200 text-slate-800 rounded-xl p-3 flex flex-col items-center justify-center shadow-sm">
+                            <i class="fa-solid fa-shapes text-2xl text-maccc-gold mb-1"></i>
+                            Toddler Room
+                        </button>
+
+                        <button onclick="inspectSpot('preschool-room')" id="spot-preschool-room" class="blueprint-spot bg-white border-2 border-stone-200 text-slate-800 rounded-xl p-3 flex flex-col items-center justify-center shadow-sm">
+                            <i class="fa-solid fa-palette text-2xl text-maccc-teal mb-1"></i>
+                            Preschool Pre-K
+                        </button>
+
+                        <button onclick="inspectSpot('kitchen-zone')" id="spot-kitchen-zone" class="blueprint-spot bg-white border-2 border-stone-200 text-slate-800 rounded-xl p-3 flex flex-col items-center justify-center shadow-sm">
+                            <i class="fa-solid fa-utensils text-2xl text-rose-500 mb-1"></i>
+                            USDA Kitchen
+                        </button>
+
+                        <button onclick="inspectSpot('library-nook')" id="spot-library-nook" class="blueprint-spot bg-white border-2 border-stone-200 text-slate-800 rounded-xl p-3 flex flex-col items-center justify-center shadow-sm">
+                            <i class="fa-solid fa-book-open text-2xl text-purple-600 mb-1"></i>
+                            Reading Corner
+                        </button>
+
+                        <button onclick="inspectSpot('playground-area')" id="spot-playground-area" class="blueprint-spot col-span-3 bg-emerald-50 border-2 border-emerald-300 text-slate-800 rounded-xl p-3 flex items-center justify-between shadow-sm">
+                            <span class="flex items-center gap-2 text-emerald-900"><i class="fa-solid fa-tree text-emerald-600"></i> Outdoor Fenced Playground Lawn</span>
+                            <span class="bg-emerald-600 text-white text-[10px] px-2 py-0.5 rounded">Outdoor Area</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 bg-white p-6 rounded-3xl border border-stone-200 shadow-md min-h-[380px] flex flex-col justify-between">
+                    <div>
+                        <span id="spot-badge" class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-maccc-teallight text-maccc-teal mb-3">Facility Detail</span>
+                        <h3 id="spot-title" class="text-2xl font-bold font-display text-slate-900 mb-2">Secure Entry Vestibule & Front Desk</h3>
+                        <p id="spot-desc" class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Double security airlocks with keypad check-in, live camera coverage, and direct director sightlines.
+                        </p>
+                        
+                        <div class="bg-stone-50 p-4 rounded-2xl border border-stone-200 space-y-2">
+                            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wide">Key Features</h4>
+                            <ul id="spot-features" class="space-y-1.5 text-xs text-slate-600">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-maccc-teal"></i> Secure parent keycard door check-in</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-maccc-teal"></i> Camera monitoring across center</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-maccc-teal"></i> Individual cubbies for every student</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-stone-200 flex items-center justify-between text-xs text-slate-500">
+                        <span><i class="fa-solid fa-location-dot text-maccc-teal"></i> 1001 Scotts Ave, Morris</span>
+                        <span class="text-maccc-teal font-bold"><i class="fa-solid fa-star text-maccc-gold"></i> 4-Star Parent Aware</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="campaign" class="py-16 sm:py-24 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-maccc-gold font-bold text-xs uppercase tracking-widest bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Community Support</span>
+                <h2 class="text-3xl sm:text-4xl font-bold font-display text-white mt-3">
+                    Capital Campaign & Playground Fund
+                </h2>
+                <p class="text-slate-300 mt-2 text-sm sm:text-base">Support non-profit child care in Morris, MN. Help us expand classrooms and upgrade equipment.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-6 bg-slate-800/90 p-6 sm:p-8 rounded-3xl border border-slate-700 shadow-2xl space-y-6">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="bg-maccc-gold text-slate-900 text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase">Capital Campaign</span>
+                            <h3 class="text-2xl font-bold font-display text-white mt-2">Expansion & Playground Fund</h3>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs text-slate-400 block">Goal</span>
+                            <span class="text-xl font-bold font-display text-maccc-gold">$100,000</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-xs font-semibold">
+                            <span class="text-slate-300">Raised to Date: <strong class="text-emerald-400" id="camp-raised-text">$82,500</strong></span>
+                            <span class="text-maccc-gold font-bold" id="camp-pct-text">82% Goal Reached</span>
+                        </div>
+                        <div class="w-full bg-slate-900 h-4 rounded-full overflow-hidden p-0.5 border border-slate-700">
+                            <div id="camp-progress-bar" class="bg-gradient-to-r from-maccc-teal via-emerald-400 to-maccc-gold h-full rounded-full transition-all duration-700" style="width: 82%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-700/80">
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wide mb-3">Simulate a Pledge Contribution:</label>
+                        <div class="grid grid-cols-4 gap-2">
+                            <button onclick="simulatePledge(100)" class="py-2.5 bg-slate-700 hover:bg-slate-600 text-xs font-bold rounded-xl border border-slate-600 transition-colors">+$100</button>
+                            <button onclick="simulatePledge(500)" class="py-2.5 bg-slate-700 hover:bg-slate-600 text-xs font-bold rounded-xl border border-slate-600 transition-colors">+$500</button>
+                            <button onclick="simulatePledge(1000)" class="py-2.5 bg-slate-700 hover:bg-slate-600 text-xs font-bold rounded-xl border border-slate-600 transition-colors">+$1,000</button>
+                            <button onclick="simulatePledge(5000)" class="py-2.5 bg-maccc-gold hover:bg-amber-500 text-slate-900 text-xs font-bold rounded-xl transition-colors">+$5,000</button>
+                        </div>
+                    </div>
+
+                    <button onclick="openModal('donate-modal')" class="w-full py-4 bg-maccc-teal hover:bg-teal-700 text-white font-bold rounded-2xl shadow-lg transition-all text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-heart text-maccc-coral"></i> Make a Donation to MACCC
+                    </button>
+                </div>
+
+                <div class="lg:col-span-6 space-y-3">
+                    <h3 class="text-lg font-bold font-display text-white mb-2">Sponsorship Opportunities</h3>
+                    
+                    <div class="p-4 bg-slate-800/60 rounded-2xl border border-slate-700 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-lg font-bold">
+                                <i class="fa-solid fa-cubes"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Community Brick ($250)</h4>
+                                <p class="text-xs text-slate-400">Engraved brick in walkway</p>
+                            </div>
+                        </div>
+                        <span class="text-xs text-maccc-gold font-bold">Available</span>
+                    </div>
+
+                    <div class="p-4 bg-slate-800/60 rounded-2xl border border-slate-700 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-lg font-bold">
+                                <i class="fa-solid fa-book-open"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Classroom Reading Nook ($1,000)</h4>
+                                <p class="text-xs text-slate-400">Dedicated book corner plaque</p>
+                            </div>
+                        </div>
+                        <span class="text-xs text-maccc-gold font-bold">Available</span>
+                    </div>
+
+                    <div class="p-4 bg-slate-800/60 rounded-2xl border border-slate-700 flex items-center justify-between">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-lg font-bold">
+                                <i class="fa-solid fa-tree"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Playground Benefactor ($5,000)</h4>
+                                <p class="text-xs text-slate-400">Sponsorship of play equipment</p>
+                            </div>
+                        </div>
+                        <span class="text-xs text-maccc-gold font-bold">3 Remaining</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="enroll-form" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-maccc-cream p-6 sm:p-10 rounded-3xl border border-stone-300 shadow-xl">
+                <div class="text-center max-w-2xl mx-auto mb-8">
+                    <span class="text-maccc-teal font-bold text-xs uppercase tracking-widest bg-maccc-teallight px-3 py-1 rounded-full border border-maccc-teal/20">Get In Touch</span>
+                    <h2 class="text-3xl font-bold font-display text-slate-900 mt-2">
+                        Schedule a Tour or Request Enrollment
+                    </h2>
+                    <p class="text-xs sm:text-sm text-slate-600 mt-1">Contact us directly at <strong>320-349-1880</strong> or send a message below.</p>
+                </div>
+
+                <form onsubmit="event.preventDefault(); submitEnrollment();" class="space-y-4">
+                    <div class="grid sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Parent / Guardian Name *</label>
+                            <input type="text" required placeholder="Jane Doe" class="w-full bg-white border border-stone-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-maccc-teal">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email Address *</label>
+                            <input type="email" required placeholder="jane@example.com" class="w-full bg-white border border-stone-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-maccc-teal">
+                        </div>
+                    </div>
+
+                    <div class="grid sm:grid-cols-3 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone Number</label>
+                            <input type="tel" placeholder="320-349-1880" class="w-full bg-white border border-stone-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-maccc-teal">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Child's Age Group</label>
+                            <select class="w-full bg-white border border-stone-300 rounded-xl px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-maccc-teal">
+                                <option>Infant (6wks–16mos)</option>
+                                <option>Toddler (16–33mos)</option>
+                                <option>Preschool (33mos–5yrs)</option>
+                                <option>School Age (K–10 yrs)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Desired Start Date</label>
+                            <input type="date" class="w-full bg-white border border-stone-300 rounded-xl px-3 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-maccc-teal">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Questions or Tour Time Preference</label>
+                        <textarea rows="3" placeholder="Let us know your schedule needs or questions about 4-Star Parent Aware standards..." class="w-full bg-white border border-stone-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-maccc-teal"></textarea>
+                    </div>
+
+                    <button type="submit" id="enroll-submit-btn" class="w-full py-4 bg-maccc-teal hover:bg-teal-800 text-white font-bold rounded-2xl shadow-lg transition-all text-sm flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Submit Tour Request & Join Waitlist
+                    </button>
+                </form>
+
+                <div id="enroll-success" class="hidden mt-4 p-4 bg-maccc-teallight border border-maccc-teal/30 text-maccc-teal rounded-2xl text-xs text-center font-bold">
+                    <i class="fa-solid fa-circle-check text-base mr-1"></i> Thank you! Your message has been sent to our directors. We will contact you shortly!
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Application Modal -->
+    <div id="apply-modal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative border border-stone-100 max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('apply-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full bg-stone-100 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-lg">
+                    <i class="fa-solid fa-user-nurse"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold font-display text-slate-900">Career Application</h3>
+                    <p class="text-xs text-maccc-purple font-semibold" id="apply-job-title">Lead Infant Educator</p>
+                </div>
+            </div>
+
+            <form onsubmit="event.preventDefault(); submitJobApp();" class="space-y-3">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Full Name *</label>
+                    <input type="text" required placeholder="Alex Johnson" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-maccc-purple">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email *</label>
+                        <input type="email" required placeholder="alex@example.com" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-maccc-purple">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Phone *</label>
+                        <input type="tel" required placeholder="320-555-0199" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-maccc-purple">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Education / Credentials</label>
+                    <select class="w-full bg-stone-50 border border-stone-300 rounded-xl px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-maccc-purple">
+                        <option>Child Development Associate (CDA)</option>
+                        <option>Associate Degree in Early Childhood</option>
+                        <option>Bachelor's Degree or Higher</option>
+                        <option>High School Diploma / Currently Enrolled UMN</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Brief Background / Experience</label>
+                    <textarea rows="3" placeholder="Tell us about your work experience with young children..." class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-maccc-purple"></textarea>
+                </div>
+
+                <button type="submit" class="w-full py-3.5 bg-maccc-purple hover:bg-purple-800 text-white font-bold rounded-xl shadow-lg transition-all text-sm">
+                    Submit Job Application
+                </button>
+            </form>
+
+            <div id="apply-modal-success" class="hidden mt-3 p-3 bg-purple-100 text-purple-900 text-xs text-center font-bold rounded-xl">
+                <i class="fa-solid fa-check mr-1"></i> Application received! Our director will contact you soon.
+            </div>
+        </div>
+    </div>
+
+    <!-- Staff Handbook Modal -->
+    <div id="handbook-modal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative border border-stone-100">
+            <button onclick="closeModal('handbook-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full bg-stone-100 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-lg">
+                    <i class="fa-solid fa-book"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold font-display text-slate-900">Staff Handbook Access</h3>
+                    <p class="text-xs text-slate-500">Internal Employee SOPs & Rules</p>
+                </div>
+            </div>
+
+            <div class="space-y-3 text-xs text-slate-600 leading-relaxed">
+                <p>Enter employee login password to view or download the 2026 MACCC Staff Policy Handbook PDF.</p>
+                <input type="password" placeholder="Employee Passcode" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-2.5 text-sm">
+                <button onclick="alert('Staff Handbook PDF downloaded!')" class="w-full py-3 bg-slate-900 text-white font-bold rounded-xl text-xs hover:bg-slate-800">
+                    <i class="fa-solid fa-download mr-1"></i> Download Handbook (PDF)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sub Request Modal -->
+    <div id="sub-modal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative border border-stone-100">
+            <button onclick="closeModal('sub-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full bg-stone-100 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-lg">
+                    <i class="fa-solid fa-user-clock"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold font-display text-slate-900">Shift Coverage Request</h3>
+                    <p class="text-xs text-slate-500">Staff Leave & Substitute Form</p>
+                </div>
+            </div>
+
+            <form onsubmit="event.preventDefault(); alert('Coverage request submitted to Director!'); closeModal('sub-modal');" class="space-y-3 text-xs">
+                <div>
+                    <label class="block font-bold text-slate-700 mb-1">Staff Member Name</label>
+                    <input type="text" required placeholder="Your Name" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-3 py-2 text-sm">
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-700 mb-1">Requested Leave Date</label>
+                    <input type="date" required class="w-full bg-stone-50 border border-stone-300 rounded-xl px-3 py-2 text-sm">
+                </div>
+                <div>
+                    <label class="block font-bold text-slate-700 mb-1">Classroom Room</label>
+                    <select class="w-full bg-stone-50 border border-stone-300 rounded-xl px-3 py-2 text-sm">
+                        <option>Infant Suite</option>
+                        <option>Toddler Room</option>
+                        <option>Preschool Pre-K</option>
+                        <option>School Age</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full py-3 bg-maccc-teal text-white font-bold rounded-xl text-xs hover:bg-teal-700">
+                    Submit Shift Sub Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Donation Modal -->
+    <div id="donate-modal" class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative border border-stone-100">
+            <button onclick="closeModal('donate-modal')" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 w-8 h-8 rounded-full bg-stone-100 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-4">
+                <div class="w-10 h-10 rounded-xl bg-rose-100 text-maccc-coral flex items-center justify-center font-bold text-lg">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold font-display text-slate-900">Support MACCC</h3>
+                    <p class="text-xs text-slate-500">Tax-deductible non-profit contribution.</p>
+                </div>
+            </div>
+
+            <form onsubmit="event.preventDefault(); submitDonateModal();" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Donor Full Name</label>
+                    <input type="text" required placeholder="John Smith" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-maccc-teal">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Email Address</label>
+                    <input type="email" required placeholder="john@example.com" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-maccc-teal">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Pledge Amount ($)</label>
+                    <input type="number" required placeholder="250" class="w-full bg-stone-50 border border-stone-300 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-maccc-teal">
+                </div>
+
+                <button type="submit" class="w-full py-3.5 bg-maccc-gold hover:bg-amber-500 text-slate-900 font-bold rounded-xl shadow-lg transition-all text-sm">
+                    Complete Pledge Request
+                </button>
+            </form>
+
+            <div id="donate-modal-success" class="hidden mt-3 p-3 bg-maccc-teallight text-maccc-teal text-xs text-center font-bold rounded-xl">
+                <i class="fa-solid fa-check mr-1"></i> Thank you for supporting child care in Morris!
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="space-y-3">
+                    <div class="flex items-center space-x-2 text-white font-display text-xl font-bold">
+                        <i class="fa-solid fa-hands-holding-child text-maccc-gold"></i>
+                        <span>Morris Area Child Care</span>
+                    </div>
+                    <p class="text-xs leading-relaxed">
+                        A licensed non-profit child care center earning a 4-Star Parent Aware Rating. Dedicated to high-quality early learning in Morris, MN.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-3 font-display">Navigation</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#about" class="hover:text-white transition-colors">About MACCC</a></li>
+                        <li><a href="#programs" class="hover:text-white transition-colors">Infant, Toddler & Preschool</a></li>
+                        <li><a href="#calculator" class="hover:text-white transition-colors">Tuition & CCAP Estimator</a></li>
+                        <li><a href="#caregivers" class="hover:text-white transition-colors">Caregivers Portal & Careers</a></li>
+                        <li><a href="#faq" class="hover:text-white transition-colors">Frequently Asked Questions</a></li>
+                        <li><a href="#campaign" class="hover:text-white transition-colors">Capital Campaign</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-3 font-display">Careers & Join Team</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#caregivers" class="hover:text-white transition-colors">Lead Teacher Positions</a></li>
+                        <li><a href="#caregivers" class="hover:text-white transition-colors">Assistant Educator Hiring</a></li>
+                        <li><a href="#caregivers" class="hover:text-white transition-colors">Substitute Teacher Sign-up</a></li>
+                        <li><span class="text-slate-500">Equal Opportunity Provider</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white text-xs font-bold uppercase tracking-wider mb-3 font-display">Contact MACCC</h4>
+                    <p class="text-xs leading-relaxed space-y-1.5">
+                        <span class="block"><i class="fa-solid fa-location-dot text-maccc-gold mr-1.5"></i> 1001 Scotts Ave, Morris, MN 56267</span>
+                        <span class="block"><i class="fa-solid fa-phone text-maccc-gold mr-1.5"></i> <strong>320-349-1880</strong></span>
+                        <span class="block"><i class="fa-solid fa-envelope text-maccc-gold mr-1.5"></i> morrisareachildcare@hotmail.com</span>
+                        <span class="block"><i class="fa-solid fa-clock text-maccc-gold mr-1.5"></i> Mon-Fri: 5:45 AM – 6:00 PM</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>&copy; 2026 Morris Area Child Care Center (MACCC). All rights reserved.</p>
+                <div class="flex space-x-4 text-sm">
+                    <a href="https://www.facebook.com/MorrisAreaChildCareCenter/" target="_blank" class="hover:text-maccc-gold transition-colors" aria-label="Facebook Page"><i class="fa-brands fa-facebook"></i> Facebook Page</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Program Tabs Logic ---
+        function switchProgram(key) {
+            document.querySelectorAll('.prog-pane').forEach(pane => pane.classList.add('hidden'));
+            document.querySelectorAll('.prog-tab-btn').forEach(btn => {
+                btn.classList.remove('bg-maccc-teal', 'text-white', 'shadow-md');
+                btn.classList.add('text-slate-600');
+            });
+
+            document.getElementById(`prog-content-${key}`).classList.remove('hidden');
+            const activeBtn = document.getElementById(`prog-tab-${key}`);
+            activeBtn.classList.add('bg-maccc-teal', 'text-white', 'shadow-md');
+            activeBtn.classList.remove('text-slate-600');
+        }
+
+        // --- Tuition Calculator ---
+        function runTuitionCalc() {
+            const age = document.getElementById('calc-age').value;
+            const sched = document.querySelector('input[name="schedule"]:checked').value;
+            const hasCCAP = document.getElementById('calc-ccap').checked;
+
+            let base = 255;
+            if (age === 'toddler') base = 220;
+            if (age === 'preschool') base = 195;
+            if (age === 'schoolage') base = 125;
+
+            let discount = 0;
+            if (sched === 'part') discount = base * 0.35;
+            if (sched === 'half') discount = base * 0.45;
+
+            const subtotal = base - discount;
+            let ccapCredit = hasCCAP ? subtotal * 0.55 : 0;
+            const finalTotal = Math.max(0, subtotal - ccapCredit);
+
+            document.getElementById('out-base').textContent = `$${base.toFixed(2)}`;
+            document.getElementById('out-discount').textContent = discount > 0 ? `-$${discount.toFixed(2)}` : '$0.00';
+            document.getElementById('out-ccap').textContent = ccapCredit > 0 ? `-$${ccapCredit.toFixed(2)}` : '-$0.00';
+            document.getElementById('out-final').innerHTML = `$${Math.round(finalTotal)}<span class="text-xs font-sans text-slate-400 font-normal"> / week</span>`;
+        }
+
+        // --- Blueprint Hotspots ---
+        const spotData = {
+            'vestibule': {
+                badge: 'Security & Reception',
+                title: 'Secure Entry Vestibule & Front Desk',
+                desc: 'Equipped with double-door security airlocks, parent keycard access, visitor verification cameras, and direct administrative sightlines.',
+                features: [
+                    'Parent keycard secure door entrance',
+                    'HD security camera coverage throughout',
+                    'Individual student cubbies & storage'
+                ]
+            },
+            'infant-room': {
+                badge: 'Ages 6wks – 16mos',
+                title: 'Lead Infant Nurturing Suite',
+                desc: 'Shoe-free padded flooring, quiet crib quarters, HEPA air filtration, and individual feeding/sleeping schedules.',
+                features: [
+                    '1:4 Teacher-to-Infant ratio',
+                    'Separate quiet sleep nursery room',
+                    'Daily app photo updates & log'
+                ]
+            },
+            'toddler-wing': {
+                badge: 'Ages 16 – 33mos',
+                title: 'Lead Toddler Active Classroom',
+                desc: 'Tactile play, song circles, water/sand sensory tables, and child-sized restrooms encouraging potty training independence.',
+                features: [
+                    '1:7 Staff-to-Toddler ratio',
+                    'Step-up sinks & toddler toilets',
+                    'Messy art & outdoor playground time'
+                ]
+            },
+            'preschool-room': {
+                badge: '4-Star Parent Aware',
+                title: 'Lead Preschool & Pre-K Discovery',
+                desc: 'Phonics stations, counting blocks, science experiments, splash pad days at Pomme de Terre Park, and Kindergarten readiness.',
+                features: [
+                    '1:10 Staff-to-Preschool ratio',
+                    'Minnesota Early Learning Aligned',
+                    'Direct door to outdoor playground'
+                ]
+            },
+            'kitchen-zone': {
+                badge: 'CACFP USDA Nutrition',
+                title: 'Commercial USDA Kitchen',
+                desc: 'Preparing fresh, warm breakfast, lunch, and afternoon snacks following USDA nutrition guidelines daily.',
+                features: [
+                    'Allergen-isolated meal prep',
+                    'Fresh milk & local fruit sourcing',
+                    'Family-style dining social skills'
+                ]
+            },
+            'library-nook': {
+                badge: 'Literacy Corner',
+                title: 'Reading Nook & Story Corner',
+                desc: 'Cozy shared space with soft foam seating, hundreds of children books, story audio stations, and nature discovery items.',
+                features: [
+                    'Curated age-appropriate books',
+                    'Quiet reading & relaxation space',
+                    'STEM nature observation specimens'
+                ]
+            },
+            'playground-area': {
+                badge: 'Outdoor Play',
+                title: 'Fenced Outdoor Nature Playground',
+                desc: 'Commercial climbing structures, tricycle track, shade sails, rubber safety surfacing, and outdoor gardening boxes.',
+                features: [
+                    'High perimeter safety fence',
+                    'Age-separated play structures',
+                    'Splash pad trips & sandbox'
+                ]
+            }
+        };
+
+        function inspectSpot(key) {
+            const data = spotData[key];
+            if (!data) return;
+
+            document.querySelectorAll('.blueprint-spot').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`spot-${key}`).classList.add('active');
+
+            document.getElementById('spot-badge').textContent = data.badge;
+            document.getElementById('spot-title').textContent = data.title;
+            document.getElementById('spot-desc').textContent = data.desc;
+
+            const list = document.getElementById('spot-features');
+            list.innerHTML = '';
+            data.features.forEach(feat => {
+                const li = document.createElement('li');
+                li.className = 'flex items-center gap-2';
+                li.innerHTML = `<i class="fa-solid fa-circle-check text-maccc-teal"></i> ${feat}`;
+                list.appendChild(li);
+            });
+        }
+
+        // --- FAQ Accordion & Filtering ---
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const icon = button.querySelector('.fa-chevron-down');
+            const isOpen = !answer.classList.contains('hidden');
+
+            document.querySelectorAll('.faq-answer').forEach(ans => ans.classList.add('hidden'));
+            document.querySelectorAll('.faq-item .fa-chevron-down').forEach(ic => ic.style.transform = 'rotate(0deg)');
+
+            if (!isOpen) {
+                answer.classList.remove('hidden');
+                if (icon) icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        function switchFaqCat(category) {
+            document.querySelectorAll('.faq-cat-btn').forEach(btn => {
+                btn.classList.remove('bg-maccc-teal', 'text-white');
+                btn.classList.add('bg-stone-100', 'text-slate-700');
+            });
+
+            const activeBtn = document.getElementById(`faq-tab-${category}`);
+            activeBtn.classList.add('bg-maccc-teal', 'text-white');
+            activeBtn.classList.remove('bg-stone-100', 'text-slate-700');
+
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        function filterFaqs() {
+            const query = document.getElementById('faq-search').value.toLowerCase();
+            document.querySelectorAll('.faq-item').forEach(item => {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        // --- Job Application Modal ---
+        function openApplyModal(title) {
+            document.getElementById('apply-job-title').textContent = title;
+            openModal('apply-modal');
+        }
+
+        function submitJobApp() {
+            document.getElementById('apply-modal-success').classList.remove('hidden');
+            setTimeout(() => closeModal('apply-modal'), 2000);
+        }
+
+        // --- Capital Campaign Simulator ---
+        let raisedAmount = 82500;
+        const totalGoal = 100000;
+
+        function simulatePledge(add) {
+            raisedAmount += add;
+            if (raisedAmount > totalGoal) raisedAmount = totalGoal;
+            const pct = Math.round((raisedAmount / totalGoal) * 100);
+
+            document.getElementById('camp-raised-text').textContent = `$${raisedAmount.toLocaleString()}`;
+            document.getElementById('camp-pct-text').textContent = `${pct}% Goal Reached`;
+            document.getElementById('camp-progress-bar').style.width = `${pct}%`;
+        }
+
+        // --- Modal Helper Functions ---
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+            const ok = document.getElementById(`${id}-success`);
+            if (ok) ok.classList.add('hidden');
+        }
+
+        function submitDonateModal() {
+            document.getElementById('donate-modal-success').classList.remove('hidden');
+            setTimeout(() => closeModal('donate-modal'), 2000);
+        }
+
+        function submitEnrollment() {
+            document.getElementById('enroll-success').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
